@@ -13,5 +13,5 @@ print(f"Last 3 hours: {temperatures[-3:]}")
 
 #Task-3: The Immutable Config
 screen_res = (1920, 1080)
-#screen_res[0] = 1280
+screen_res[0] = 1280
 print("Tuples cannot be modified!")
