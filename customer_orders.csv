@@ -1,0 +1,8 @@
+Name,Customer_ID,Price,Payment_mode,Location,Date
+Abia,101,3000,Cash,Banglore,20-1-26
+Nadia,104,None,Card,None,2-3-26
+Keerti,105,1580,None,Chennai,29-5-25
+None,102,2500,UPI,None,12-7-25
+Abia,101,3000,Cash,Banglore,20-1-26
+Keerti,105,1580,None,Chennai,29-5-25
+Parvati,103,None,Cash,Mysore,9-12-25

@@ -1,0 +1,6 @@
+Name,Customer_ID,Price,Payment_mode,Location,Date
+Abia,101,$3000.00,Cash,BANGlore,20-1-26
+Nadia,104,$4790.00,Card,Banglore,2-3-26
+Keerti,105,$1580.00,UPI,  Chennai,29-5-25
+Tasmiya,102,$2500.00,UPI,   Hyderabad,12-7-25
+Parvati,103,$3700.00,Cash,MySORE,9-12-25
