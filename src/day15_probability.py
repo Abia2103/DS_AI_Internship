@@ -20,11 +20,12 @@ ss2 = [[1,1],[1,2],[1,3],[1,4],[1,5],[1,6],
        ]
 n2=len(ss2)
 sum=0
-            
-for l in ss2:
-    if l[0]+l[1] == 7:
-        sum+=1
-print("Probability of getting sum as 7 in 2 dice  = ",sum/n2)
+for k in range(1,1001):
+    for l in ss2:
+        if l[0]+l[1] == 7:
+            sum+=1
+
+print("Probability of getting sum as 7 in 2 dice  = ",sum/(n2*1000))
 
 
 #Task 2: The Logic of Dependency (Independent vs. Dependent)
@@ -44,9 +45,11 @@ print("Probabilty of getting red twice without replacement = ",p_redred)
 
 #Task 3: The Bayesian Filter (Conditional Probability & Bayes’ Theorem)
 p_spam = 0.1
-p_free = 0.05
+p_not_spam = 0.9
 p_free_given_spam = 0.9
-p_spam_given_free = (p_free_given_spam * p_free)/p_spam
+p_free_not_spam = 0.05
+p_free = (p_free_given_spam * p_spam)+(p_free_not_spam * p_not_spam)
+p_spam_given_free = (p_free_given_spam * p_spam)/p_free
 print("Probability that an email containing free is spam = ",p_spam_given_free)
 
 
