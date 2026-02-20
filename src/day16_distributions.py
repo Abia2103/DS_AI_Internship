@@ -9,7 +9,6 @@ data = {
         "income" : [60000,42000,95000,37000,80000,110000,65000,55000,45000,42000],
         "test" : [40,78,68,89,87,62,94,95,57,79]
         }
-
 df = pd.DataFrame(data)
 
 plt.figure()
@@ -26,7 +25,6 @@ plt.figure()
 sns.histplot(df["test"],kde=True)
 plt.title("Left-skewed data")
 plt.show()
-
 
 print("Normal mean: ",df["heights"].mean())
 print("Normal median: ",df["heights"].median())
@@ -56,6 +54,21 @@ plt.figure()
 sns.histplot(sample_means,kde=True)
 plt.title("Right-skewed data after CLT")
 plt.show()
+
+
+
+
+'''np.random.seed(42)
+normal_data=np.random.normal(loc=50,scale=10,size=1000)
+skewed_data=np.random.exponent(scale=20,size=1000)
+pd.DataFrame({
+    "Normal_Data": normal_data,
+    "Skewed_Data": skewed_data})
+
+    
+
+population=df["Normal_Data"]
+sample=polulation.sample(n=50,random_state=42)'''
 
 
 
