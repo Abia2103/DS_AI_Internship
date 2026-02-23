@@ -1,4 +1,13 @@
-name = "Zaina"
-age = 16
+<<<<<<< HEAD
+name = "abia"
+age = 23
 perc=82
 print(f"Name is {name}, age is {age}, secures {perc} percentage")
+=======
+name = "Nadia"
+age = 22
+perc=92
+print(f"Name is {name}, age is {age}, secures {perc} percentage")
+
+print("interns")
+>>>>>>> feature_login
