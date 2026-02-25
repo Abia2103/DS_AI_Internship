@@ -9,19 +9,21 @@ print(df.info())  #Dataset info
 df.shape
 print(df.describe())  #Dataset basic statistics
 print("The dataset represents 205 customer data with features such as age, annual income, purchase amount, prefered devices, etc")
-df.to_csv('cleaned_customer_analytics.csv',index=False)  #saving cleaned dataset
+
 
 #Phase 2: The Cleanup (Data Preprocessing)
 print(df.isna().sum())   #no. of missing values in each column
-print("Number of duplicates: ",df.duplicated().sum())
+print("Number of duplicate rows: ",df.duplicated().sum())
 df=df.drop_duplicates()
 columns_dropped = ['Education']
 df = df.drop('Education',axis=1)
-print(df.isna().sum())
+print(df.isna().sum())     #education column dropped
 print(df['AnnualIncome'].mean())
 df['AnnualIncome'] = df['AnnualIncome'].fillna(df['AnnualIncome'].mean())
 df.shape
 print("Education and annual income columns contained missing values.\nEducation column was dropped as it did not have much significance in our analysis.\nAnnual income missing values where filled using their mean, ie., 74499.90")
+df.to_csv('cleaned_customer_analytics.csv',index=False)  #saving cleaned dataset
+
 
 #Phase 3: The Deep Dive (Univariate & Bivariate Analysis)
 sns.histplot(x=df['Age'])
@@ -29,7 +31,7 @@ plt.title("Histogram of customer age")
 plt.show() 
 
 sns.histplot(x=df['AnnualIncome'],kde=True)
-plt.title("Histogram of customers' annual income\nThe graph shows us that our majority customers earns under 100000")
+plt.title("Histogram of customers' annual income\nThe graph shows us that our majority customers earns upto 100000")
 plt.show()
 
 sns.countplot(x='PreferredDevice',data=df)
@@ -44,7 +46,7 @@ plt.ylabel("Years Employed")
 plt.show()
 
 sns.boxplot(x=df["MaritalStatus"],y=df["LastPurchaseAmount"])
-plt.title("Marital Status vs Purchase Amount boxplot.\nSingles purchase amount is higher on average than married")
+plt.title("Marital Status vs Purchase Amount boxplot.\nSingles purchase amount is higher on average than married, and no outliers")
 plt.show()
 
 
